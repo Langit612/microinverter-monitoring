@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microinverter Monitoring System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> <!-- 可选Bootstrap -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-primary">Microinverter Monitoring System</h1>
+        <p>Real-time monitoring, control and power data visualization with download capabilities.</p>
+        <p>Last Updated: <span id="last-updated">1/19/2026 2:37 PM</span></p>
+        
+        <!-- 微型逆变器面板 -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Microinverter 11 <i class="wifi-icon">📡</i></div>
+                    <div class="card-body">
+                        <table class="table">
+                            <tr><td>PV1 Power:</td><td id="pv1-power-11">168.00 W</td><td><input type="checkbox" class="toggle-switch"></td></tr>
+                            <tr><td>Status:</td><td><span class="status-green">Normal Operation</span></td></tr>
+                            <tr><td>PV2 Power:</td><td id="pv2-power-11">268.00 W</td><td><input type="checkbox" class="toggle-switch"></td></tr>
+                            <tr><td>Status:</td><td><span class="status-green">Normal Operation</span></td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- 类似Microinverter 14的面板 -->
+                <!-- ... 省略类似代码 ... -->
+            </div>
+        </div>
+        
+        <!-- 下载按钮 -->
+        <button class="btn btn-secondary">Download PNG</button>
+        <button class="btn btn-secondary">Download CSV</button>
+        
+        <!-- 图表区域 -->
+        <div class="card mt-4">
+            <div class="card-header bg-primary text-white">Microinverter 11 Power & Temperature (Last 24 Hours)</div>
+            <div class="card-body">
+                <p>Electricity Yield: 2.62 kWh</p>
+                <canvas id="power-chart" width="800" height="400"></canvas>
+            </div>
+            <div class="card-footer">System Status: <span class="status-green">Normal Operation</span></div>
+        </div>
+    </div>
+    
+    <script src="chart.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+body { font-family: Arial, sans-serif; background-color: #f8f9fa; }
+.text-primary { color: #007bff; }
+.card-header { font-weight: bold; }
+.status-green { color: green; }
+.status-green::before { content: '•'; margin-right: 5px; }
+.toggle-switch { /* 样式化开关 */ appearance: none; width: 40px; height: 20px; background: #ccc; border-radius: 10px; transition: background 0.3s; }
+.toggle-switch:checked { background: #28a745; }
+.wifi-icon { float: right; font-size: 1.2em; }
+/* 图表容器 */ #power-chart { max-width: 100%; }
