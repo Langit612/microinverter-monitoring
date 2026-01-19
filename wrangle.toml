@@ -1,0 +1,14 @@
+name = "microinverter-monitoring"           # 必须匹配你的项目名（Dashboard 中的 Worker 名）
+compatibility_date = "2026-01-19"           # 用当前日期（或最新支持日期），格式 YYYY-MM-DD
+                                            # 这会启用最新兼容性标志，避免旧版 bug
+
+# 静态资产配置（关键！告诉 Wrangler 上传这些文件）
+[assets]
+directory = "."                             # 或 "./"，意思是当前根目录所有文件（index.html 等就在这里）
+                                            # 如果你的文件在 public/ 子文件夹，改成 "public"
+
+# 可选：如果未来想加 Worker 脚本（现在不需要）
+# main = "src/index.js"                     # 注释掉或删除
+
+# 如果你用 workers.dev 子域名（默认）
+workers_dev = true
